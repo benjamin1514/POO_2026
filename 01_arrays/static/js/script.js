@@ -136,4 +136,34 @@ Llega una urgencia: "Sonia" debe ser atendida de inmediato (usa .unshift()).
 Muestra cuántos pacientes quedan y quién es el siguiente en la lista.
  */
 
-function consultorioMedico()
+function consultorioMedico() {
+    let pacientes = ["Ana", "Betto"];
+    pacientes.push("Carlos", "Diana");
+    pacientes.shift();
+    pacientes.unshift("Sonia")
+
+    alert(`Quedan ${pacientes.length} y el siguiente es ${pacientes[1]}`)
+}
+
+/*Instrucciones: Dada la siguiente estructura:
+JavaScript
+let caja = [
+    ["frutas", "verduras"],
+    [["manzana", "pera"], ["tomate", "lechuga"]]
+];
+
+Accede a "pera" y a "lechuga".
+Crea una frase que diga: "En la canasta hay pera y lechuga".
+Muestra con alert(). */
+
+function profundidad() {
+    let caja = [
+    ["frutas", "verduras"],
+    [
+        ["manzana", "pera"], ["tomate", "lechuga"]
+    ]
+];
+
+alert(`En la canasta hay ${caja[1][0][1]} y ${caja[1][1][1]}`)
+
+}
