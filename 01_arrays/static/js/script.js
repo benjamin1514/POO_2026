@@ -127,3 +127,13 @@ tablero[2][2] = 1;
 
 alert(tablero)
 }
+
+
+/*Instrucciones: Crea una función con un arreglo let pacientes = ["Ana", "Betto"];.
+Llegan dos pacientes más: "Carlos" y "Diana" (usa .push()).
+Atienden al primero (usa .shift()).
+Llega una urgencia: "Sonia" debe ser atendida de inmediato (usa .unshift()).
+Muestra cuántos pacientes quedan y quién es el siguiente en la lista.
+ */
+
+function consultorioMedico()
