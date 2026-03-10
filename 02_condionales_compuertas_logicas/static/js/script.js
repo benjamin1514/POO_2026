@@ -62,3 +62,39 @@ function stock() {
         alert("Espacio disponible");
     }
 }
+
+
+/*5. Limpieza de Datos
+A veces recibimos datos basura. let colaEspera = ["error_404", "Juan", "Sofía"];
+Si el primer elemento (índice 0) es igual a "error_404", elimínalo usando .shift() y muestra la cola limpia.
+Si no, muestra: "La lista de espera está correcta".
+ */
+
+function limpiezaDatos() {
+    let colaEspera = ["error_404", "Juan", "Sofía"];
+    let indice0 = colaEspera.shift();
+
+    if(indice0 === colaEspera) {
+        alert(`${colaEspera}`)
+    } else {
+        alert(`La lista de espera esta correcta ${colaEspera }`)
+    }
+};
+
+
+/*Tienes una lista de usuarios comunes: let foro = ["User1", "User2"];
+Declara la variable rol.
+Si el rol es "Admin", agrega el nombre al inicio de la lista con .unshift() para que tenga prioridad.
+Si no es Admin, agrégalo al final con .push(). */
+
+function VIP() {
+    let foro = ["User1", "User2"];
+    let rol = "admin";
+
+    if(foro[0] === rol && foro.unshift) {
+        alert(`${foro[1]}`)
+    } else {
+        alert(`${foro[0].shift()}`)
+    }
+
+}
