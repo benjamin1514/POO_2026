@@ -110,8 +110,8 @@ Si es menor a 4: "Reprobado".
 
 function calificaciones() {
     let nota = parseFloat(prompt("Ingrese su nota: "))
-    
-    if(nota >= 6 && nota <= 7) {
+
+    if (nota >= 6 && nota <= 7) {
         alert("Excelente eximido")
     } else if (nota >= 4 && nota <= 5.9) {
         alert("Aprobado, vas a examen")
@@ -132,7 +132,7 @@ function invitados() {
     let invitados = ["Ana", "Luis", "Camila", "Diego"];
 
     let persona = prompt("Coloque su nombre: ");
-    if(invitados.includes(persona)) {
+    if (invitados.includes(persona)) {
         alert(`¡Bienvenido ${persona}! Pasa a la fiesta`);
     } else {
         alert("Lo siento, no estás en la lista de invitados.")
@@ -148,14 +148,45 @@ Si no, muestra: "No tenemos ese producto en esa sección".
  */
 
 function almacenMatrices() {
-    let estanteria = [ ["Manzanas", "Peras"], ["Leche", "Yogur"] ];
-    let seccion = prompt("Ingrese 0 o 1")
-    let producto = prompt("que producto quiere");
-    
-
-    if(seccion.includes(estanteria)) {
-        alert(`El producto esta en la estanteria`)
+    let estanteria = [["manzanas", "peras"], ["leche", "yogur"]];
+    let seccion = parseInt(prompt("Ingrese la sección (0 o 1)"));
+    let producto = prompt("Ingresar producto solicitado").toLowerCase();
+    if (seccion < 0 || seccion > 1) {
+        alert("No tenemos esa estanteria")
+    }
+    else if (estanteria[seccion].includes(producto)) {
+        alert("El producto esta en la estanteria")
     } else {
         alert("No tenemos ese producto en esa sección")
     }
 }
+
+/*Crea un arreglo vacío llamado bitacora.
+Declara las variables nombreVisita y esVip (booleano).
+Si el nombre está vacío: Mostrar error.
+Si el nombre existe y esVip es true: Agregarlo al inicio con .unshift().
+Si el nombre existe y esVip es false: Agregarlo al final con .push().
+Al final, muestra cuántas personas hay en total usando .length. */
+
+let bitacora = [];
+
+function ejercicio10() {
+    let nombreVisita = prompt("Ingresa tu nombre");
+    let vip = parseInt(prompt(`Eres VIP? \n0 = no\n1 = si`));
+    nombreVisita = nombreVisita.trim();
+    if (nombreVisita == "") {
+        alert("Error: el nombre no puede estar vacio")
+    } else if (bitacora.includes(nombreVisita)) {
+        alert("Esa persona ya esta en la lista.")
+    } else if (vip == 1) {
+        bitacora.unshift(nombreVisita)
+        alert(`Agregado correctamente a la lista: \n${bitacora.join(", ")}\nPersonas en total:
+        ${bitacora.length}`)
+    } else if (vip == 0) {
+        bitacora.push(nombreVisita)
+        alert(`Agregado correctamente a la lista: \n${bitacora.join(", ")}\nPersonas en total:
+        ${bitacora.length}`)
+    } else {
+        alert("Ingrese valores válidos.")
+    }
+};
