@@ -29,7 +29,9 @@ function asistenciaAutomatica() {
     const container = document.getElementById('resultadoContainer2');
     const resultado = document.getElementById('result2');
 
-
-    
+    for (let i = 0; i <= 3; i++) {
+        curso.includes(resultado)
+    }
+    resultado.textContent = `${curso.join(", ")}`;
     container.classList.remove('d-none');
 };
