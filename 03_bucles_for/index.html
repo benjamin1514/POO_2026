@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nombre autor/a -->
+    <meta name="author" content="benjamindelgado@liceovvh.cl">
+    <title>Bucles for</title>
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Estilos boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <main class="container p-3 d-flex gap-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 1</h5>
+                <p class="card-text">El Contador en Pantalla</p>
+                <a href="#" onclick="contadorDigital()" class="btn btn-primary">Ejecutar</a>
+                <div id="resultadoContainer1" class=" mt-4 d-none">
+                    <h5>Resultado: </h5>
+                    <div id="result1" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 2</h5>
+                <p class="card-text">Lista de Asistencia Automática</p>
+                <a href="#" onclick="asistenciaAutomatica()" class="btn btn-primary">Ejecutar</a>
+                <div id="resultadoContainer2" class=" mt-4 d-none">
+                    <h5>Resultado: </h5>
+                    <div id="result2" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 3</h5>
+                <p class="card-text">Buscador de Aprobados (Escala 1 a 7)</p>
+                <a href="#" onclick="filtroDuplicados()" class="btn btn-primary">Ejecutar</a>
+                <div id="resultadoContainer" class=" mt-4 d-none">
+                    <h5>Resultado: </h5>
+                    <div id="result3" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 4</h5>
+                <p class="card-text">El Filtro de Inventario</p>
+                <a href="#" onclick="stock()" class="btn btn-primary">Ejecutar</a>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="container p-3 d-flex gap-3 mt-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 5</h5>
+                <p class="card-text">Sumando la Colecta</p>
+                <a href="#" onclick="limpiezaDatos()" class="btn btn-primary">Ejecutar</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 6</h5>
+                <p class="card-text">Formateador de Nombres VIP</p>
+                <a href="#" onclick="VIP()" class="btn btn-primary">Ejecutar</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 7</h5>
+                <p class="card-text">El Buscador de Stock Específico</p>
+                <a href="#" onclick="calificaciones()" class="btn btn-primary">Ejecutar</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 8</h5>
+                <p class="card-text">Generador de Párrafos de Advertencia</p>
+                <a href="#" onclick="invitados()" class="btn btn-primary">Ejecutar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- script JS  -->
+    <script src="static/js/script.js"></script>
+    <!-- JS boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
