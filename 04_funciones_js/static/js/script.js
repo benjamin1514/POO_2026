@@ -89,9 +89,9 @@ function ingresarPedidos(nombre) {
 
 
 function gestionarPedidos() {
-    const container = document.getElementById("container2");
-    const result = document.getElementById("result2");
-    const input = document.getElementById("input2 ");
+    const container = document.getElementById("container3");
+    const result = document.getElementById("result3");
+    const input = document.getElementById("input3");
 
     let nombre = input.value;
     let resultado = ingresarPedidos(nombre);
