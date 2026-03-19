@@ -86,8 +86,6 @@ function ingresarPedidos(nombre) {
     return entregas.join(", ")
 }
 
-
-
 function gestionarPedidos() {
     const container = document.getElementById("container3");
     const result = document.getElementById("result3");
