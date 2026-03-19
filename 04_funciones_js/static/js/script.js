@@ -81,22 +81,87 @@ Limpia el input.
 */
 
 let entregas = ["Pizza", "Sushi", "Hamburguesa", "Ensalada"];
-function ingresarPedidos(nombre) {
-    entregas.shift(nombre);
-    return entregas.join(", ")
+
+function actualizarPedido(pedido) {
+    if (pedido == "Despachar") {
+        let eliminado = entregas.shift()
+    } else if (pedido == "Cancelar") {
+        entregas.pop()
+    } else {
+        alert("Ingrese un valor válido")
+    };
+
+    return `${entregas.join(", ")}`
 }
 
 function gestionarPedidos() {
     const container = document.getElementById("container3");
     const result = document.getElementById("result3");
-    const input = document.getElementById("input3");
-
-    let nombre = input.value;
-    let resultado = ingresarPedidos(nombre);
+    const input = document.getElementById("input3").value;
+    let resultado = actualizarPedido(input);
 
     result.textContent = resultado;
     input.value = "";
     container.classList.remove("d-none");
+}
+
+
+/*
+Contexto: Una tienda online revisa si el código promocional que 
+ingresó el cliente existe en su base de datos para aplicarle una rebaja.
+Crea un arreglo: let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
+Función Principal: Crea verificarCodigo().
+Captura el código desde el input.
+Crea una variable mensaje = "Código inválido o expirado";.
+Recorre el arreglo con un ciclo for.
+Si el elemento actual del ciclo es igual al texto del input, cambia la variable 
+mensaje a "¡Éxito! Código aceptado".
+Fuera del ciclo, inyecta la variable mensaje en el textContent del párrafo.
+Limpia el input.
+*/
+
+let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
+
+function buscarCodigo(codigo) {
+    let mensaje = "Código inválido o expirado"
+    for (let i = 1; i < codigosValidos.length; i++) {
+        if (codigo === codigosValidos[i]) {
+            mensaje = "¡Exito! Código aceptado";
+            return "¡Éxito! Código aceptado"
+        } else {
+            mensaje = "Ingresa un código válido"
+        }
+    };
+    return mensaje
+};
+
+function verificarCodigo() {
+    const input = document.getElementById("input4");
+    let codigo = input.value;
+    const container = document.getElementById("container4");
+    const result = document.getElementById("result4");
+    let resultado = buscarCodigo(codigo);
+
+    result.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none");
+};
+
+/*
+Contexto: Un cliente compra un producto 
+y el sistema le genera automáticamente las etiquetas para sus próximas 3 letras de pago.
+Función Principal: Crea simularCuotas().
+Captura el nombre del producto desde el input (ej: "Bicicleta").
+Crea una variable vacía: registroPagos = "";
+Crea un ciclo for que dé exactamente 3 vueltas (del 1 al 3).
+En cada vuelta, súmale (+=) a registroPagos el producto y el número de la cuota 
+(Ej: producto + " - Cuota " + i + " | ").
+Fuera del ciclo, muestra la variable registroPagos en el textContent del párrafo.
+Limpia el input.
+*/
+
+function simuladorCuotas() {
+    
 }
 
 
