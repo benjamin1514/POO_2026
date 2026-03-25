@@ -236,4 +236,26 @@ function filtrarPrecios() {
 };
 
 
+/*
+Contexto: El usuario ingresa su Sueldo Bruto. 
+Una función matemática oculta descuenta el 20% (AFP y Salud) y 
+le devuelve el dato a la pantalla para mostrar cuánto dinero real recibirá a fin de mes.
+Función Ayudante (La Matemática): Crea una función calcularDescuentos(bruto). 
+Esta función multiplica el bruto por 0.8 y usa return para devolver el resultado.
+Función Principal (La Interfaz): Crea procesarSueldo(). (Esta va en el botón).
+Captura el sueldo desde el input y conviértelo a número.
+Dentro de procesarSueldo, llama a tu función calcularDescuentos() pasándole el número capturado, 
+y guarda lo que te devuelve en una variable llamada sueldoLiquido.
+Modifica el textContent del párrafo: "Tu sueldo a pago es: $" + sueldoLiquido.
+Limpia el input.
+*/
+
+function calcularDescuentos(bruto) {
+    
+}
+
+function procesarSueldo() {
+
+}
+
 
